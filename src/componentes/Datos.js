@@ -35,8 +35,8 @@ export default function Datos() {
   const enterprise = useDatos()
 
   return (<body>
-    <div className={Style.left_mountain}></div>
-    <div className={Style.back_mountain}></div>
+
+   
     <div className={Style.sun}></div>
 
     
