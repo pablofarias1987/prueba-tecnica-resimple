@@ -4,9 +4,6 @@ import './index.css';
 import Datos from './componentes/Datos';
 import * as serviceWorker from './serviceWorker';
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
-
 
 ReactDOM.render(<Datos />, document.getElementById('root'));
 

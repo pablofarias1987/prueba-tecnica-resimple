@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import * as XLSX from "xlsx";
-import Enterprise from "./Enterprise.css";
+import Style from "./Enterprise.module.css";
 
 function useDatos() {
   const [enterprise, setEmployees] = useState([])
@@ -34,10 +34,15 @@ export default function Datos() {
 
   const enterprise = useDatos()
 
-  return (
-    <div className="container mt-5" align="center">
-      
-      <h4>List of Employees</h4>
+  return (<body>
+    <div className={Style.left_mountain}></div>
+    <div className={Style.back_mountain}></div>
+    <div className={Style.sun}></div>
+
+    
+    <div class="container" align="center">
+
+      <h1>List of Employees JSON</h1>
         
       <div className="row">
 
@@ -46,8 +51,8 @@ export default function Datos() {
           <table className="table table-bordered">
             <thead className="thead-dark">
               <tr>
-                <th scope="col">ID EMPRESA</th>
-	              <th scope="col">NOMBRE_EMPRESA</th>
+                <th scope="col">ID ENTERPRISE</th>
+	              <th scope="col">NAME ENTERPRISE</th>
               </tr>
             </thead> 
             <tbody>
@@ -67,13 +72,20 @@ export default function Datos() {
 
         </div>
 
-
+    <div className={Style.frame}>
+      <div className={Style.canvas}>
+        <div className={Style.one}></div>
+        <div className={Style.two}></div>
+        <div className={Style.three}></div>
+      </div>
+    </div>
     <input 
       type="file" 
       accept=".xlsx, .xls" 
       onChange={handleFileUpload} 
     />
-
+   
+      <h1>List of Employees Excel</h1>
     {data.length > 0 && (
       <table className="table">
         <thead>
@@ -95,18 +107,23 @@ export default function Datos() {
       </table>
     )}
 
-    <br /><br />
-    ... Employees ...
+
   </div>
-
-
-      <section className="mt-5 mb-5">
-        <div align="center">
-            Desarrollado por <a href="https://www.linkedin.com/in/pablo-farias-gallardo-3355a8b8/" target="_blank">Pablo Farias Gallardo</a>
-        </div> 
-      </section>
         
     </div>
+    <footer>
+        <address>
+    <section className="mt-5 mb-5">
+        <div align="center">
 
+        Developed by - <a href="https://www.linkedin.com/in/pablo-farias-gallardo-3355a8b8/" target="_blank">Pablo Farias Gallardo</a><br/>
+          santiago,
+          chile
+         
+      </div> 
+      </section>
+      </address>
+      </footer>
+      </body>
   )
 }
